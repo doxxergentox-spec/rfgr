@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunny License Key Generator 🐰</title>
+  <style>
+    body {
+      background: #0a0011;
+      color: #ffccff;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #ff66ff;
+      text-shadow: 0 0 20px #ff66ff;
+      font-size: 3em;
+      margin-bottom: 30px;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 15px;
+      border: 2px solid #ff66ff;
+      background: url('https://i.imgur.com/JJA1DKW.jpeg') no-repeat center center;
+      background-size: cover;
+      box-shadow: 0 0 50px #ff66ff;
+      color: #ffffcc;
+    }
+    button {
+      background: #ff3399;
+      color: #fff;
+      font-size: 1.8em;
+      padding: 15px 50px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 20px #ff3399;
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #ff66ff;
+    }
+    #generatedKey {
+      font-size: 2em;
+      margin-top: 30px;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+      word-break: break-word;
+    }
+    #copyBtn {
+      display: none;
+      background: #66ff66 !important;
+      color: #000 !important;
+      margin-top: 20px;
+      padding: 10px 30px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #copyBtn:hover {
+      background: #99ff99 !important;
+      box-shadow: 0 0 20px #ccffcc !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bunny License Key Generator 🐰</h1>
+    <button onclick="generateKey()">GENERATE KEY</button>
+    <div id="generatedKey">Click the button to generate a key...</div>
+    <button id="copyBtn" onclick="copyKey()">COPY KEY</button>
+  </div>
+
+  <script>
+    const LICENSE_KEYS = [
+      "BRUH-26A7K9P2M4X8R1T5-1345",
+      "CRASH-2026N3Q8T1W5Z9J2-3891",
+      "DOOM-XR4V7B2J9F6L0P3-0764",
+      "ELITE-26K4L8M3N9P1Q5R7-5012",
+      "FBI-XT2U6V9W4X0Y5Z8A1-3129",
+      "GHOST-P4Q9R1S5T8U2V6W0-0674",
+      "KEKW-Q5R0S6T2U7V4W9X3-1896",
+      "LMAO-2027H8J3K6L9M2N4-4123",
+      "MOG-2027Z1A4B8C3D6E9-0785",
+      "NUKE-A9B2C7D4F1G5H8J0-2347",
+      "PRO-26M3Q8V5X1Z6A2B4-2890",
+      "REKT-K1L6M2N8P4Q9R3S7-3892",
+      "SHADOW-2025R3S7T1U5V8W0-1748",
+      "SUS-XR5T1U4V7W0Y9Z2A6-1987",
+      "VOID-D9E2F7G5H1J6K8L3-4258",
+      "XD-2026K7N4P9R2T8U1V5-1345",
+      "YEET-26M5N1P7Q3R8S0T4-4561",
+      "TURBO-2026XAI-NUKE-9999",
+      "CRACKED-BY-GROK-1337",
+      "BUNNY-NUKE-15.0-LEET-2026"
+    ];
+
+    function generateKey() {
+      const randomKey = LICENSE_KEYS[Math.floor(Math.random() * LICENSE_KEYS.length)];
+      document.getElementById("generatedKey").innerText = randomKey;
+      document.getElementById("copyBtn").style.display = "inline-block";
+    }
+
+    function copyKey() {
+      const keyText = document.getElementById("generatedKey").innerText;
+      navigator.clipboard.writeText(keyText)
+        .then(() => alert("Key copied to clipboard! 🐰"))
+        .catch(() => alert("Copy failed!"));
+    }
+  </script>
+</body>
+</html>
